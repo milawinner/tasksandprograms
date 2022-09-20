@@ -3,29 +3,20 @@
 // [3, 7, 23, 12] -> 19
 // [-4, -6, 89, 6] -> 0
 
-Console.WriteLine("Введите количество элементов для будущего массива:");
-int numZ = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"Создаем массив из {numZ} элементов");
+Console.WriteLine("Сколько элементов должно быть в будущем массиве?");
+int size = Convert.ToInt32(Console.ReadLine());
 
-int [] myArr = new int [numZ];
-for (int i = 0; i < myArr.Length; i++)
+int [] massiv = new int [size];
+int sum = 0;
+for (int i = 0; i < massiv.Length; i++)
 {
-    myArr[i] = new Random().Next( -99, 100);
-    Console.Write($"{myArr[i]} ");
+    massiv[i] = new Random().Next(-100, 101);
+    Console.Write($" {massiv[i]} ");
+     if (i % 2 > 0)
+        {
+            sum += massiv[i];
+        }
 } 
 
-int SumOfOddPositionNumbers (int [] arr)
-{
-    int sum = 0;
-    for (int i = 0; i < arr.Length; i++)
-    {
-        if ( i % 2 > 0)
-        {
-            sum += arr[i];
-        }
-    }
-    return sum;
-}
 Console.WriteLine();
-int result = SumOfOddPositionNumbers(myArr);
-Console.WriteLine(result);
+Console.WriteLine($"Сумма элементов, стоящих на нечётных позициях: {sum}");

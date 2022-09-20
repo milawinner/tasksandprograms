@@ -2,29 +2,22 @@
 // Найдите разницу между максимальным и минимальным элементов массива.
 // [3 7 22 2 78] -> 76
 
-Console.WriteLine("Введите количество элементов для будущего массива:");
-int numZ = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"Создаем массив из {numZ} элементов");
+Console.WriteLine("Сколько элементов должно быть в массиве?");
+int size = Convert.ToInt32(Console.ReadLine());
 
-int [] myArr = new int [numZ];
-for (int i = 0; i < myArr.Length; i++)
+int[] massiv = new int [size];
+for (int i = 0; i < massiv.Length; i++)
 {
-    myArr[i] = new Random().Next( 0, 100);
-    Console.Write($"{myArr[i]} ");
+    massiv[i] = new Random().Next(0, 100);
+    Console.Write($" {massiv[i]} ");
 } 
-
-int DiffrentMinMax (int [] arr)
+int min = massiv[0];
+int max = massiv[0];
+for (int i = 1; i < massiv.Length; i++)
 {
-    int min = arr[0];
-    int max = arr[0];
-    for (int i = 1; i < arr.Length; i++)
-    {
-        if (arr[i] < min) min = arr[i];
-        else if (arr[i] > max) max = arr[i];
-    }
-    return max - min;
+    if (massiv[i] < min) min = massiv[i];
+    else if (massiv[i] > max) max = massiv[i];
 }
-
+int diff = max - min;
 Console.WriteLine();
-int result = DiffrentMinMax(myArr);
-Console.WriteLine(result);
+Console.WriteLine($"Разница между максимальным и минимальным элементами массива равна: {diff}");

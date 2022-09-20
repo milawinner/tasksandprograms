@@ -6,7 +6,7 @@
 Console.WriteLine("Сколько элементов должно быть в будущем массиве?");
 int size = Convert.ToInt32(Console.ReadLine());
 
-int [] massiv = new int [size];
+int[] massiv = new int[size];
 int sum = 0;
 for (int i = 0; i < massiv.Length; i++)
 {

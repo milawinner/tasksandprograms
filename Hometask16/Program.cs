@@ -31,8 +31,8 @@ void ElementPosition (int [,] doubleArray)
     int d = Convert.ToInt32(Console.ReadLine());
     if (c < doubleArray.GetLength(0) & d < doubleArray.GetLength(0)) 
     {
-        Console.WriteLine($"Этот элемент имеет следующее значение: {doubleArray[c,d]}");
+        Console.WriteLine($"Этот элемент имеет следующее значение: {doubleArray[c,d]} ");
     }
-    else Console.WriteLine("Такого элемента нет в этом массиве");
+    else Console.WriteLine("Такого элемента нет в этом массиве.");
 }
 ElementPosition(doubleArray);

@@ -8,7 +8,7 @@
 my_list = [2, 3, 5, 6]
 
 product_pairs = round(len(my_list)/2)
-if product_pairs < len(my_list) / 2:
+if product_pairs < len(my_list)/2:
     product_pairs += 1
 new_list = []
 i = 0
